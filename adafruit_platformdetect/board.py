@@ -498,8 +498,6 @@ class Board:
             return boards.ORANGE_PI_5
         if "Orange Pi 3B" in board_value:
             return boards.ORANGE_PI_3B
-        if "Orange Pi CM4" in board_value:
-            return boards.ORANGE_PI_CM4
         return None
 
     def _sama5_id(self) -> Optional[str]:
@@ -631,6 +629,8 @@ class Board:
             board = boards.ROCK_PI_3C
         if board_value and "Rockchip RK3566 OPi 3B" in board_value:
             board = boards.ORANGE_PI_3B
+        if board_value and "Orange Pi CM4" in board_value:
+            board = boards.ORANGE_PI_CM4
         if board_value and "Hardkernel ODROID-M1S" in board_value:
             board = boards.ODROID_M1S
         elif "quartz64-a" in board_value.lower():
