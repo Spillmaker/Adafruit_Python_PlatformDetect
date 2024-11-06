@@ -498,6 +498,8 @@ class Board:
             return boards.ORANGE_PI_5
         if "Orange Pi 3B" in board_value:
             return boards.ORANGE_PI_3B
+        if "Orange Pi CM4" in board_value:
+            return boards.ORANGE_PI_CM4
         return None
 
     def _sama5_id(self) -> Optional[str]:
